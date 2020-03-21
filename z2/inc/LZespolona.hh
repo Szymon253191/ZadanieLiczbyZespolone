@@ -3,7 +3,7 @@
 
 /*!
  *  Plik zawiera definicje struktury LZesplona oraz zapowiedzi
- *  przeciazen operatorow arytmetycznych dzialajacych na tej 
+ *  przeciazen operatorow arytmetycznych dzialajacych na tej
  *  strukturze.
  */
 
@@ -22,9 +22,12 @@ struct  LZespolona {
  */
 
 
-LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2);
-LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
-LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
-LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
+LZespolona  operator + (LZespolona  skl1,  LZespolona  skl2); //dodawanie
+LZespolona  operator - (LZespolona  skl1,  LZespolona  skl2); //odjemowanie
+LZespolona  operator * (LZespolona  skl1,  LZespolona  skl2); //mnozenie
+LZespolona  operator / (LZespolona  skl1,  LZespolona  skl2); //dzielenie
+
+std::istream & operator >>(std::istream & strm, LZespolona & skl); //wprowadzanie liczby zespolonej
+std::istream & operator <<(std::istream & strm, LZespolona & skl); //wyswietlanie liczby zespolonej
 
 #endif
