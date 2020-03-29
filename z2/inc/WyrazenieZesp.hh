@@ -28,6 +28,6 @@ struct WyrazenieZesp {
  */
 
 LZespolona Oblicz(WyrazenieZesp  WZ);
-std::istream & operator >> (std::istream & strm, WyrazenieZesp & WZ); //wyswietlanie wyrazenia zespolonego: Liczba Znak Liczba
-
+std::istream & operator >> (std::istream & strm, WyrazenieZesp & WZ);
+std::istream & operator  (std::istream & strm, WyrazenieZesp WZ)
 #endif

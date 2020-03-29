@@ -92,7 +92,9 @@ bool operator != (LZespolona wynik, LZespolona odp)
     return !(odp == wynik);
 }
 
-std::istream & operator >>(std::istream & strm, LZespolona & skl)
+
+
+std::istream & operator >> (std::istream & strm, LZespolona & skl)
 {
     char znak;
     strm >> znak;

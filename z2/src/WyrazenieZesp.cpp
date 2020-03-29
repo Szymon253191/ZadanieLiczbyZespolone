@@ -5,17 +5,7 @@
  * Tu nalezy zdefiniowac funkcje, ktorych zapowiedzi znajduja sie
  * w pliku naglowkowym.
  */
-LZespolona Oblicz(WyrazenieZesp  WZ)
-{
-    strm>>WZ.Arg1>>WZ.Op>>WZ.Arg2
-    switch(WZ.Op)
-    {
-    case 0: WZ.Arg1.re //
-    case 1:            // dzialania jak
-    case 2:            // w LZespolona.cpp ??
-    case 3:            //
-    }
-}
+
 
 std::istream & operator >> (std::istream & strm, WyrazenieZesp & WZ)
 {
@@ -33,4 +23,23 @@ std::istream & operator >> (std::istream & strm, WyrazenieZesp & WZ)
         break;
     }
     return strm;
+}
+
+LZespolona Oblicz(WyrazenieZesp  WZ)
+{
+    switch(WZ.Op)
+    {
+    case 0:
+        return WZ.Arg1 + WZ.Arg2;
+        break;
+    case 1:
+        return WZ.Arg1 - WZ.Arg2;
+        break;
+    case 2:
+        return WZ.Arg1 * WZ.Arg2;
+        break;
+    case 3:
+        return WZ.Arg1 / WZ.Arg2;
+        break;
+    }
 }
