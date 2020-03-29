@@ -25,11 +25,9 @@ struct WyrazenieZesp {
 
 /*
  * Funkcje ponizej nalezy zdefiniowac w module.
- *
  */
 
 LZespolona Oblicz(WyrazenieZesp  WZ);
-// void Wyswietl(WyrazenieZesp  WyrZ); // ta funkcja zostala zastapiona metoda ponizej
 std::istream & operator >> (std::istream & strm, WyrazenieZesp & WZ); //wyswietlanie wyrazenia zespolonego: Liczba Znak Liczba
 
 #endif

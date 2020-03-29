@@ -7,7 +7,7 @@
  */
 LZespolona Oblicz(WyrazenieZesp  WZ)
 {
-    strm ? >>WZ.Arg1>>WZ.Op>>WZ.Arg2
+    strm>>WZ.Arg1>>WZ.Op>>WZ.Arg2
     switch(WZ.Op)
     {
     case 0: WZ.Arg1.re //
@@ -24,8 +24,13 @@ std::istream & operator >> (std::istream & strm, WyrazenieZesp & WZ)
     switch(znak)
     {
     case '+': WZ.Op = Dodaj;
+        break;
     case '-': WZ.Op = Odejmij;
+        break;
     case '*': WZ.Op = Mnoz;
+        break;
     case '/': WZ.Op = Dziel;
+        break;
     }
+    return strm;
 }

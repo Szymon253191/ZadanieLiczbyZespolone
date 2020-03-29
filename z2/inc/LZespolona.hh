@@ -20,14 +20,21 @@ struct  LZespolona {
 /*
  * Dalej powinny pojawic sie zapowiedzi definicji przeciazen operatorow
  */
+LZespolona stworz (double re, double im);
 
+LZespolona sprzezenie (LZespolona liczba);
+LZespolona modul (LZespolona liczba);
 
 LZespolona  operator + (LZespolona  skl1,  LZespolona  skl2); //dodawanie
 LZespolona  operator - (LZespolona  skl1,  LZespolona  skl2); //odjemowanie
 LZespolona  operator * (LZespolona  skl1,  LZespolona  skl2); //mnozenie
 LZespolona  operator / (LZespolona  skl1,  LZespolona  skl2); //dzielenie
+LZespolona  operator / (LZespolona  skl1,  double modul);
+bool  operator == (LZespolona wynik, LZespolona odp);
+bool  operator != (LZespolona wynik, LZespolona odp);
 
-std::istream & operator >>(std::istream & strm, LZespolona & skl); //wprowadzanie liczby zespolonej
-std::istream & operator <<(std::istream & strm, LZespolona & skl); //wyswietlanie liczby zespolonej
+std::istream & operator >> (std::istream & strm, LZespolona & skl); //wprowadzanie liczby zespolonej
+std::ostream & operator << (std::ostream & strm, LZespolona skl);
+
 
 #endif
